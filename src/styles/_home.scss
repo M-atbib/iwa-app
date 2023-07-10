@@ -83,6 +83,9 @@
           rgba(156, 161, 179, 1) 72%,
           rgba(199, 204, 219, 1) 100%
         );
+        h3 {
+          color: $alice-blue;
+        }
         p {
           color: $alice-blue;
         }
@@ -239,10 +242,10 @@
       flex-direction: row;
       margin-bottom: 120px;
       &_card {
-        height: 240px;
+        height: 300px;
 
         .icon {
-          margin-bottom: 0;
+          margin-bottom: 20px;
         }
 
         p {

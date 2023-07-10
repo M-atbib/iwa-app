@@ -1,8 +1,5 @@
 import React from "react";
-import header from "../assets/header.jpg";
-import sectionOne from "../assets/choose-1.png";
-import sectionTwo from "../assets/choose-2.png";
-import avatar from "../assets/avatar.png";
+import { avatar, chooseOne, chooseTwo, header } from "../assets";
 import { Link } from "react-router-dom";
 import { solutions, techsoul, websiteSolution } from "../constants";
 
@@ -35,9 +32,10 @@ const Home = () => {
       </div>
 
       <div className="home-solutions">
-        {solutions.map(({ id, icon, desc }) => (
+        {solutions.map(({ id, icon, title, desc }) => (
           <div className="home-solutions_card" key={id}>
             {icon}
+            <h3>{title}</h3>
             <p>{desc}</p>
             <Link className="link">Read More</Link>
           </div>
@@ -54,14 +52,14 @@ const Home = () => {
 
           <div className="home-section1_left-list">
             {websiteSolution.map(({ id, title }) => (
-              <div key={id} className="item">
+              <Link to={`/service/${id}`} key={id} className="item">
                 {title}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
 
-        <img src={sectionOne} alt="img" />
+        <img src={chooseOne} alt="img" />
       </div>
 
       <div className="home-section2">
@@ -73,14 +71,14 @@ const Home = () => {
 
           <div className="home-section1_left-list">
             {techsoul.map(({ id, title }) => (
-              <div key={id} className="item">
+              <Link to={`/service/${id}`} key={id} className="item">
                 {title}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
 
-        <img src={sectionTwo} alt="img" />
+        <img src={chooseTwo} alt="img" />
       </div>
 
       <div className="home-stats">

@@ -1,0 +1,16 @@
+export { default as avatar } from "./avatar.png";
+export { default as apps } from "./apps.jpg";
+export { default as chooseOne } from "./choose-1.png";
+export { default as chooseTwo } from "./choose-2.png";
+export { default as cloud } from "./cloud.jpg";
+export { default as discovery } from "./discovery.jpg";
+export { default as ecom } from "./e-com-dev.jpg";
+export { default as footer } from "./footer.jpg";
+export { default as header } from "./header.jpg";
+export { default as homeFont } from "./home-font.png";
+export { default as managed } from "./managed.jpg";
+export { default as network } from "./network.jpg";
+export { default as pso } from "./pso.jpg";
+export { default as shopify } from "./shopify.jpg";
+export { default as webDesign } from "./web-design.jpg";
+export { default as wordpress } from "./wordpress.jpg";

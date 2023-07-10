@@ -59,7 +59,7 @@
     }
 
     &-links {
-      @include flex(row, flex-end, center, 20px);
+      @include flex(row, flex-end, center, 30px);
       background: none;
       position: relative;
       height: fit-content;
@@ -83,11 +83,15 @@
         margin: 0;
         font-size: 20px;
         padding: 10px 20px;
-        background: $slate-gray;
+        color: $cadet;
+        background: $french-gray;
         cursor: pointer;
+        margin-left: 20px;
 
         &:hover {
           background: $cadet;
+          transform: scale(1.15);
+          background-color: $peach;
         }
       }
     }

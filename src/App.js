@@ -7,6 +7,7 @@ import {
   Footer,
   Home,
   Navbar,
+  ServiceDetail,
   Services,
 } from "./components";
 
@@ -33,9 +34,9 @@ const App = () => {
             <Connexion />
           </Route>
 
-          {/* <Route exact path="/service/:name">
+          <Route exact path="/service/:serviceId">
             <ServiceDetail />
-          </Route> */}
+          </Route>
         </Switch>
       </div>
 
