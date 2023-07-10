@@ -1,0 +1,298 @@
+.home {
+  &-header {
+    width: 90%;
+    margin: 70px auto;
+    @include flex(column, center, center, 50px);
+
+    &_text {
+      text-align: center;
+
+      h1 {
+        width: 87%;
+        margin: 0 auto;
+        font-size: 28px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      p {
+        width: 85%;
+        margin: 30px auto 50px auto;
+        font-size: 13px;
+        color: $slate-gray;
+        letter-spacing: 0.04rem;
+        line-height: 1.3;
+      }
+
+      button {
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+        &.btn1 {
+          background-color: $alice-blue;
+          margin-right: 15px;
+
+          &:hover {
+            background-color: $slate-gray;
+          }
+        }
+
+        &.btn2 {
+          background-color: $peach;
+
+          &:hover {
+            background-color: transparent;
+            border: 2px solid $peach;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-solutions {
+    width: 90%;
+    margin: 100px auto;
+    @include flex(column, center, center, 40px);
+
+    &_card {
+      background: white;
+      width: 100%;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.8s ease-in-out;
+
+      &:hover {
+        transform: translateY(-10%);
+        background: linear-gradient(
+          232deg,
+          rgba(118, 123, 145, 1) 0%,
+          rgba(118, 123, 145, 1) 17%,
+          rgba(118, 123, 145, 1) 46%,
+          rgba(156, 161, 179, 1) 72%,
+          rgba(199, 204, 219, 1) 100%
+        );
+        p {
+          color: $alice-blue;
+        }
+      }
+
+      .icon {
+        background: $alice-blue;
+        padding: 15px;
+        font-size: 50px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+      }
+
+      p {
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+
+      .link {
+        text-decoration: underline;
+        font-weight: 600;
+        color: $peach;
+      }
+    }
+  }
+
+  &-section1,
+  &-section2 {
+    width: 90%;
+    margin: 0 auto;
+    &_left {
+      p {
+        margin-top: 25px;
+        line-height: 1.4;
+      }
+
+      &-list {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        @include flex(column, center, flex-start, 25px);
+
+        .item {
+          width: 100%;
+          border-bottom-right-radius: 20px;
+          border-left: 4px solid $peach;
+          padding: 15px 20px;
+          font-size: 18px;
+          text-transform: capitalize;
+          font-weight: 500;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          position: relative;
+          z-index: 1;
+          overflow-x: hidden;
+          transition: all 0.8s ease-in-out;
+          cursor: pointer;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      margin-bottom: 100px;
+    }
+  }
+
+  &-stats {
+    background: url("./assets/footer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 320%;
+    @include flex(column, center, center, 50px);
+    text-transform: capitalize;
+    padding: 100px 0;
+    margin-bottom: 50px;
+
+    &_part {
+      text-align: center;
+
+      h1 {
+        margin-bottom: 10px;
+        font-size: 40px;
+      }
+    }
+  }
+
+  &-reviews {
+    width: 90%;
+    margin: 50px auto;
+    @include flex(column, center, center, 30px);
+    &-card {
+      background: $alice-blue;
+      text-align: center;
+      padding: 40px;
+      border-radius: 20px;
+
+      p {
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      &_profile {
+        img {
+          width: 100px;
+          border-radius: 50%;
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+
+        p {
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
+@include media-md {
+  .home {
+    &-header {
+      flex-direction: row;
+      margin-top: 120px;
+      margin-bottom: 200px;
+
+      &_text {
+        text-align: left;
+
+        h1 {
+          font-size: 35px;
+          width: 100%;
+        }
+
+        p {
+          margin: 25px 0 45px 0;
+          line-height: 1.5;
+          font-size: 15px;
+        }
+
+        button {
+          padding: 15px 25px;
+          font-size: 18px;
+
+          &.btn1 {
+            margin-right: 25px;
+          }
+        }
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+
+    &-solutions {
+      flex-direction: row;
+      margin-bottom: 120px;
+      &_card {
+        height: 240px;
+
+        .icon {
+          margin-bottom: 0;
+        }
+
+        p {
+          width: 90%;
+          margin: 25px auto;
+        }
+      }
+    }
+
+    &-section1,
+    &-section2 {
+      @include flex(row, center, center, 50px);
+      &_left {
+        &-list {
+          margin-top: 40px;
+          margin-bottom: 0;
+          @include flex(row, flex-start, flex-start, 25px);
+          flex-wrap: wrap;
+
+          .item {
+            width: 310px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      img {
+        width: 41%;
+        margin-bottom: 0;
+      }
+    }
+
+    &-section1 {
+      margin-bottom: 100px;
+    }
+
+    &-section2 {
+      flex-direction: row-reverse;
+      margin-bottom: 100px;
+    }
+
+    &-stats {
+      background-size: 225%;
+      @include flex(row, center, center, 200px);
+      margin-bottom: 100px;
+    }
+
+    &-reviews {
+      @include flex(row, center, center, 30px);
+      margin-bottom: 150px;
+    }
+  }
+}

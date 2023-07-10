@@ -1,1 +1,17 @@
 @import "config";
+@import "navbar";
+@import "footer";
+@import "home";
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.05rem;
+  line-height: 1.1;
+}

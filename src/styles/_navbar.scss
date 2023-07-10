@@ -1,0 +1,95 @@
+.navbar {
+  @include flex(row, space-between, center, 10px);
+  width: 90%;
+  margin: 25px auto;
+
+  &-menu {
+    font-size: 30px;
+  }
+
+  &-links {
+    display: none;
+    background: $peach;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 170px;
+
+    &.active {
+      @include flex(column, flex-start, center, 25px);
+    }
+
+    &_close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+    }
+
+    &_item {
+      transition: all 0.5s ease-in-out;
+      &-link {
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+
+    &_button {
+      background: $cadet;
+      color: $french-gray;
+      font-size: 23px;
+      font-weight: 600;
+      border: none;
+      border-radius: 15px;
+      padding: 15px 25px;
+      margin-top: 50px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+@include media-md {
+  .navbar {
+    width: 95%;
+    margin-top: 40px;
+    &-menu {
+      display: none;
+    }
+
+    &-links {
+      @include flex(row, flex-end, center, 20px);
+      background: none;
+      position: relative;
+      height: fit-content;
+      padding: 0;
+
+      &_close {
+        display: none;
+      }
+
+      &_item {
+        &-link {
+          font-size: 19px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      &_button {
+        margin: 0;
+        font-size: 20px;
+        padding: 10px 20px;
+        background: $slate-gray;
+        cursor: pointer;
+
+        &:hover {
+          background: $cadet;
+        }
+      }
+    }
+  }
+}
