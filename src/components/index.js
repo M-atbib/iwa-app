@@ -5,4 +5,4 @@ export { default as Services } from "./Services";
 export { default as Contact } from "./Contact";
 export { default as Connexion } from "./Connexion";
 export { default as Footer } from "./Footer";
-export { default as ServiceDetail } from "./ServiceDEtail";
+export { default as ServiceDetail } from "./ServiceDetail";
